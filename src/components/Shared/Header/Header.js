@@ -5,7 +5,7 @@ import useAuth from '../../../hooks/useAuth';
 import { HashLink } from 'react-router-hash-link';
 import './Header.css'
 const Header = () => {
-    const {user,logOut} = useAuth();
+    const {user,logOut,isLoading} = useAuth();
     return (
 <>
   <Navbar collapseOnSelect expand="lg" className="orange" variant="dark">
@@ -27,7 +27,7 @@ const Header = () => {
           : <Nav.Link as={Link} to="/login">Login</Nav.Link>
       }
       {
-        user.displayName&& <Nav.Link className="nav-item">{user.displayName}</Nav.Link>
+        !isLoading && <Nav.Link to="/home" className="nav-item">{user.displayName}</Nav.Link>
       }
       <Nav.Link className="ms nav-item" as={Link} to="/appointment">Appointment</Nav.Link>
       
