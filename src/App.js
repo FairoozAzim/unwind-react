@@ -13,6 +13,9 @@ import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration';
 import AuthProvider from './context/AuthContext/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails/ServiceDetails';
+import Footer from './components/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -54,7 +57,14 @@ function App() {
         <Route path ='/register'>
          <Registration></Registration>
         </Route>
-      </Switch>
+        <PrivateRoute path ='/service/:serviceId'>
+         <ServiceDetails></ServiceDetails>
+        </PrivateRoute>
+        <Route path ='*'>
+         <NotFound></NotFound>
+        </Route>
+      </Switch>   
+      <Footer></Footer>    
       </BrowserRouter>
       </AuthProvider>
       

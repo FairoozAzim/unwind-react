@@ -1,0 +1,9 @@
+.banner{
+background-image: url(../../../images/Background.png);
+background-size: cover;
+width: 100vw;
+height: 80vh;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}

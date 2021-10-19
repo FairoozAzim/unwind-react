@@ -2,32 +2,34 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import { HashLink } from 'react-router-hash-link';
 import './Header.css'
 const Header = () => {
     const {user,logOut} = useAuth();
     return (
 <>
-  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Navbar collapseOnSelect expand="lg" className="orange" variant="dark">
     <Container>
     <Navbar.Brand href="#home">Unwind</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link as={Link} to="/home#home">Home</Nav.Link>
-      <Nav.Link as={Link} to="/home#about">About Us</Nav.Link>
-      <Nav.Link as={Link} to="/home#services">Services</Nav.Link>
-      <Nav.Link as={Link} to="/home#testimonials">Testimonials</Nav.Link>
-      <Nav.Link as={Link} to="/home#schedule">Schedule</Nav.Link>
-      <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-      <Nav.Link as={Link} to="/appointment">Appointment</Nav.Link>
+      <Nav.Link className="nav-item" as={HashLink} to="/home#home">Home</Nav.Link>
+      <Nav.Link className="nav-item" as={HashLink} to="/home#about">About Us</Nav.Link>
+      <Nav.Link className="nav-item" as={HashLink} to="/#services">Services</Nav.Link>
+      <Nav.Link className="nav-item" as={HashLink} to="/#testimonials">Testimonials</Nav.Link>
+      <Nav.Link className="nav-item" as={HashLink} to="/home#schedule">Schedule</Nav.Link>
+      <Nav.Link className="nav-item" as={Link} to="/contact">Contact</Nav.Link>
       
       {
           user.email? 
-          <Button onClick={logOut}>Log Out</Button>
+          <Button className="button" onClick={logOut}>Log Out</Button>
           : <Nav.Link as={Link} to="/login">Login</Nav.Link>
       }
-      
-
+      {
+        user.displayName&& <Nav.Link className="nav-item">{user.displayName}</Nav.Link>
+      }
+      <Nav.Link className="ms nav-item" as={Link} to="/appointment">Appointment</Nav.Link>
       
     </Nav>
     </Navbar.Collapse>

@@ -1,0 +1,17 @@
+.schedule{
+    background-color: var(--orange-color);
+    width: 600px;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+.appointment{
+    background-color: var(--green-color);
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+.hours p {
+    color: white;
+}

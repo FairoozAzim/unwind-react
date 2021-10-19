@@ -1,6 +1,6 @@
 import React from 'react';
 import About from '../About/About';
-import Banner from '../Banner/Banner';
+import Banner from '../Banner/Banner'
 import Doctors from '../Doctors/Doctors';
 import Schedule from '../Schedule/Schedule';
 import Services from '../Services/Services';
