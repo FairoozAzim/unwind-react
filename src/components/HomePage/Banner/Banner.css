@@ -5,5 +5,16 @@ width: 100vw;
 height: 80vh;
 background-repeat: no-repeat;
 background-size: cover;
+background-position: center;
 position: relative;
 }
+
+@media only screen and (max-width: 600px) {
+    .banner {
+      background-image: url(../../../images/banner-small.png);
+      width: 100vw;
+      height: 80vh;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+  }

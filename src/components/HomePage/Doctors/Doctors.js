@@ -14,7 +14,7 @@ const Doctors = () => {
     return (
         <div id="doctors" className="container">
                         <h1 className="text-center header mt-5">Our Specialists</h1>
-                        <div className="container mt-5 row row-cols-1 row-cols-md-3 g-4">
+                        <div className="container mt-5 row row-cols-1 row-cols-md-3 gx-3 gy-3">
                         <div className="col">
                             <div className="card h-100 doctor-card">
                             <img src={doctor1} className="card-img-top card-image" alt="..."/>

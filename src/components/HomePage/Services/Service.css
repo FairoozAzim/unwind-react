@@ -2,3 +2,12 @@
     background-color: #e4936750;
 
 }
+.gx{
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .gx{
+        margin-right: 0;
+    }
+}

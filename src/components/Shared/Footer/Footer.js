@@ -11,8 +11,8 @@ import {AiFillMail} from 'react-icons/ai';
 const Footer = () => {
  
     return (
-        <div className="f-footer d-flex flex-colum flex-lg-row justify-content-between text-white">
-            <div className='d-flex justify-content-around container'>
+        <div className="f-footer d-flex flex-column flex-lg-row justify-content-between text-white">
+            <div className='d-flex flex-column flex-lg-row justify-content-around container'>
              <div>
                  <h4>UNWIND</h4>
                  <p className='text-muted'>This is a safe space for you. <br/> Come talk to us.</p> 

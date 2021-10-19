@@ -6,12 +6,12 @@ import image from '../../images/bannergif1.gif'
 
 const Appointment = () => {
     return (
-        <div className='container text-center '>
+        <div className='container text-center mx-auto '>
           <h1 className='header mb-5 mt-5'>Book an Appointment Today</h1>
             <div className='d-flex justify-content-around flex-column flex-lg-row'>
-              <img src={image} className='w-50'></img>
+              <img src={image} alt='' className='w-50'></img>
             
-            <div className='ms-5 '>
+            <div className='ms-lg-5 mt-sm-5 '>
             <form class="row g-3">
             <div class="col-md-12">
                 <input type="text" class="form-control" id="inputEmail4" placeholder='Full Name'/>
