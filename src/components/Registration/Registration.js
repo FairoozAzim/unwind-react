@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import './Registration.css'
 
@@ -8,11 +8,13 @@ import './Registration.css'
   const Registration = () =>  {
   const {registrationUsingEmail} = useAuth();
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const redirect_url = '/';
+  const history = useHistory();
   const onSubmit = data => 
     {
         //console.log(data);
         const {firstName, email,password } = data;
-        registrationUsingEmail(firstName,email,password);
+        registrationUsingEmail(firstName, email,password,redirect_url,history);
     }
   
    

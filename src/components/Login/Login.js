@@ -27,6 +27,7 @@ const Login = () => {
         signInUsingEmail(email, password)
         .then((userCredential) => {
           // Signed in 
+          history.push(redirect_url);
           const user = userCredential.user;
           console.log(user);
         }).finally (()=> setIsLoading(false));
